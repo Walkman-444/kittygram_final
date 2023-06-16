@@ -25,7 +25,6 @@
 * [pytest-pythonpath 0.7.3](https://pypi.org/project/pytest-pythonpath/)
 * [pytest 6.2.4](https://pypi.org/project/pytest/)
 * [PyYAML 6.0](https://pypi.org/project/PyYAML/)
-* [python-dotenv 1.0.0](https://pypi.org/project/python-dotenv/)
 
 ## Локальный запуск проекта
 
