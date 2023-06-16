@@ -12,11 +12,11 @@ web_server_name = os.getenv('WEB_SERVER_NAME')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
+SECRET_KEY = secret_key
 
-DEBUG = True
+DEBUG = debug
 
-ALLOWED_HOSTS = ['51.250.20.116', '127.0.0.1', 'localhost', 'sprint14.zapto.org']
+ALLOWED_HOSTS = [web_server_ip, local_server_ip, local_server_name, web_server_name]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
