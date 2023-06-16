@@ -32,7 +32,7 @@ services:
     image: walkman444/kittygram_gateway
     env_file: .env
     ports:
-      - 9000:80
+      - $${{ secrets.NGINX_PORT }}:$${{ secrets.HOST_PORT }}
     volumes:
       - static:/static
       - media:/media
