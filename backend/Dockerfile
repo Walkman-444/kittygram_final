@@ -10,9 +10,9 @@ RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
 
-CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kittygram_backend.wsgi"]
+#CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kittygram_backend.wsgi"]
 #CMD ["make", "run"]
 
-#RUN chmod +x docker-entrypoint.sh
+RUN chmod +x docker-entrypoint.sh
 
-#ENTRYPOINT ["./docker-entrypoint.sh"]
+ENTRYPOINT ["./docker-entrypoint.sh"]
