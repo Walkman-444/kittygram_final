@@ -10,4 +10,5 @@ RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+CMD ["make", "run"]
+#ENTRYPOINT ["./docker-entrypoint.sh"]
