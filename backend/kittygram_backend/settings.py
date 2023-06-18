@@ -1,4 +1,5 @@
 # flake8: noqa
+import environ
 import os
 from pathlib import Path
 
@@ -12,11 +13,17 @@ web_server_name = os.getenv('WEB_SERVER_NAME')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = secret_key
+env = environ.Env(
+    SECRET_KEY=(str, 'mysecretkey'),
+    DEBUG=(bool, False),
+    ALLOWED_HOSTS=(list, '*')
+)
+environ.Env.read_env(BASE_DIR / '.env')
 
-DEBUG = debug
+SECRET_KEY = env('SECRET_KEY')
+DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = [web_server_ip, local_server_ip, local_server_name, web_server_name]
+ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
 INSTALLED_APPS = [
     'django.contrib.admin',

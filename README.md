@@ -25,6 +25,7 @@
 * [pytest-pythonpath 0.7.3](https://pypi.org/project/pytest-pythonpath/)
 * [pytest 6.2.4](https://pypi.org/project/pytest/)
 * [PyYAML 6.0](https://pypi.org/project/PyYAML/)
+* [django-environ 0.10.0] (https://pypi.org/project/django-environ/)
 
 ## Локальный запуск проекта
 
