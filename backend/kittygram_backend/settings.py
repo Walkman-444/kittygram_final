@@ -3,14 +3,6 @@ import environ
 import os
 from pathlib import Path
 
-secret_key = os.getenv('SECRET_KEY', default='antikey')
-debug = os.getenv('DEBUG', default=False)
-web_server_ip = os.getenv('WEB_SERVER_IP')
-local_server_ip = os.getenv('LOCAL_SERVER_IP', default='127.0.0.1')
-local_server_name = os.getenv('LOCAL_SERVER_NAME', default='localhost')
-web_server_name = os.getenv('WEB_SERVER_NAME')
-
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env(
